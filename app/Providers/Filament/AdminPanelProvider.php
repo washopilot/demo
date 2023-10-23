@@ -26,6 +26,8 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->plugin(new MinimalTheme())
             ->viteTheme('resources/css/filament/admin/theme.css')
+            ->colors(MinimalTheme::getColors())
+            ->icons(MinimalTheme::getIcons())
             ->default()
             ->id('admin')
             ->login(Login::class)
