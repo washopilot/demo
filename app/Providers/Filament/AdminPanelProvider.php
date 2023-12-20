@@ -11,6 +11,7 @@ use Filament\MinimalTheme;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\SpatieLaravelTranslatablePlugin;
 use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -60,6 +61,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->plugin(
+                SpatieLaravelTranslatablePlugin::make()
+                    ->defaultLocales(['en', 'es', 'nl']),
+            );
     }
 }
