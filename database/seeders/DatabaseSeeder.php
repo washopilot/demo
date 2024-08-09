@@ -26,7 +26,7 @@ use Symfony\Component\Console\Helper\ProgressBar;
 
 class DatabaseSeeder extends Seeder
 {
-    const IMAGE_URL = 'https://source.unsplash.com/random/200x200/?img=1';
+    const IMAGE_URL = 'https://picsum.photos/200';
 
     public function run(): void
     {
